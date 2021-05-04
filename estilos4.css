@@ -17,7 +17,6 @@
     margin: 0 auto;
     margin-top: 4%;
     color: white;
-
     border-radius: 15px;
   }
   
@@ -44,9 +43,6 @@
     line-height: 1.75em;
   }
   .box ul li {
-    display: inline-block;
-  }
-  .box ul2 li {
     display: inline-block;
   }
   .box ul2{

@@ -67,9 +67,10 @@ header .textos-header{
     margin-right: auto;
     margin-top: 3em;
     margin-bottom:3e;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 30px;
+    display:grid; /*El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de cuadrícula.*/
+    grid-template-columns: repeat(3,1fr); /*La frunidad (una "fracción") se puede utilizar al definir cuadrículas como 
+    cualquier otra longitud de CSS */
+    grid-gap: 30px; /*que especifica los canales entre las filas y las columnas de la cuadrícula.*/
 }
 .item{
     background-color: #fff;
@@ -91,10 +92,10 @@ header .textos-header{
 }
 .item:hover::after{
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1); /*despues del efecto de agrandar*/
 }
 .item:hover{
-    transform: scale(1.05);
+    transform: scale(1.05); /*hace el efecto de agrandar*/
 }
 .item-text h3{
     text-align: center;
@@ -113,7 +114,7 @@ header .textos-header{
 }
 @media screen and (min-width:590px) {
     .Portafolio3{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr); 
     }
     
 }

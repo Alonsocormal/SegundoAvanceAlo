@@ -1,59 +1,61 @@
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+    margin:0; /*margen para los cuatro lados*/
+    padding: 0; /*espacio entre el contenido del elemento y su borde*/
+    box-sizing: border-box; /*calcular el ancho y alto total de un elemento.
+    cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento.*/
 }
 body{
-    font-family: 'open sans';
+    font-family: 'open sans'; /*tipo de letra*/
 }
 .contenedor{
     padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
+    width: 90%; /*ancho*/
+    max-width: 1000px; /*ancho maximo*/
+    margin: auto; 
+    overflow: hidden; /*especifica contenido recortado y no muestra barras de posicion*/
 }
 .titulo{
     color: black;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 60px;
+    font-size: 30px; /*tamaño de letra*/
+    text-align: center; /*alineacion del texto*/
+    margin-bottom: 60px; /*margen de abajo*/
 }
 
 /*Header*/
 header{
     width: 100%;
-    height: 600px;
+    height: 600px; /*alto*/
     background: #ebe5e9;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(345, 2%, 58%, 0.459), hsla(14, 96%, 50%, 0.555)), url(../src/portada.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, hsla(340, 1%, 47%, 0.459), hsla(0, 98%, 49%, 0.582)), url(../src/portada.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+    background-size: cover; /*tamaño de las imagenes de fondo, escala la imagen al > tamaño sin estirarla*/
+    background-attachment: fixed; /*posicion de imagen fija*/
+    position: relative; /*posicionamiento en base al documento, desplazado en relacion asimismo*/
 }
 nav{
     text-align: right;
-    padding: 30px 50px 0 0;
+    padding: 30px 50px 0 0; /*arriba-derecha-abajo-izquierda*/
 }
 nav > a{
     color: white;
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 10px;
+    font-weight: 300; /*grueso de la letra*/
+    text-decoration: none; /*formato de texto*/
+    margin-right: 10px; 
 }
 nav > a:hover{
-    text-decoration: underline;
+    text-decoration: underline; /*subrayar*/
 }
 header .textos-header{
-    display:flex;
+    display:flex; /*elemento flexible para alterar sus dimensiones y llenar el espacio disponible.*/
     height: 430px;
     width: 100%;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; /*especifica cómo colocar los objetos flexibles en el contenedor flexible
+    El eje principal del contenedor flexible es el mismo que el eje del bloque. */
     text-align: center;
 }
 .textos-header h1{
@@ -66,14 +68,15 @@ header .textos-header{
     color: white;
 }
 .wave{
-    position: absolute;
-    bottom: 0;
+    position: absolute; /*removido del flujo normal del documento, no se crea espacio alguno para el elemento en el esquema de la página.*/
+    bottom: 0; /*distancia entre el borde inferior del elemento y el borde inferior de su bloque contenedor.*/
     width: 100%;
 }
 
 /*Concepto y Objetivos*/
 .contenedor-sobre-carrera{
-    display: flex;
+    display: flex; /*establece los tipos de visualización interna y externa de un elemento.
+    El elemento se comporta como un elemento de bloque y establece su contenido de acuerdo con el modelo de flexbox*/
     justify-content: space-evenly;
 }
 
@@ -86,16 +89,17 @@ header .textos-header{
 .contenido-textos h3{
     margin-bottom: 15px;
 }
-.contenido-textos h3 span{
+.contenido-textos h3 span{ /*un span es un contenedor, estilo al texto*/
     background: red;
     color:white;
     border-radius: 50%;
-    display: inline-block;
-    text-align: center;
+    display: inline-block; /*crea cajas que son de bloque y en línea de forma simultánea.*/
+    text-align: center; 
     width: 30px;
     height: 30px;
     padding: 2px;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.5); /*añade efectos de sombra alrededor del marco de un elemento.
+    desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.*/
     margin-right: 5px;
 }
 .contenido-textos p{
@@ -118,7 +122,7 @@ header .textos-header{
 .galeria-port{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*Los elementos flex son colocados en varias líneas. */
 }
 
 .imagen-port{
@@ -132,16 +136,18 @@ header .textos-header{
 .imagen-port > img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
+    object-fit: cover; /*El contenido se dimensiona para mantener su relación de aspecto mientras 
+    llena el contenedor completo del elemento.*/
+    display: block; /*	El elemento genera un cuadro de elemento de bloque.*/
 }
 
-.hover-galeria{
+.hover-galeria{ /*El efecto Hover consiste en la alteración del aspecto de un elemento de la interfaz 
+    gráfica​ cuando se sitúa el puntero sobre el mismo*/
     position:absolute;
     width: 100%;
     height: 100%;
     top:0;
-    transform: scale(0);
+    transform: scale(0); /*Especifica una operación de escalado 2D descrita por [sx, sy].*/
     background: red;
     transition: transform .5s;
     display: flex;
@@ -181,7 +187,7 @@ header .textos-header{
     width: 100px;
     height: 120px ;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid white; /*permite definir de golpe todos los bordes en una única regla de la hoja de estilos.*/
     border-radius: 50%;
     display:block;
 } 
